@@ -2,6 +2,10 @@
   "name": "@santerijps/global-state-react",
   "version": "1.0.0",
   "description": "Global state management in React",
+  "repository": {
+    "type": "github",
+    "url": "https://github.com/santerijps/global-state-react"
+  },
   "keywords": ["react", "javascript", "typescript", "js", "ts", "global", "state", "store", "hook"],
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
