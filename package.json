@@ -1,0 +1,27 @@
+{
+  "name": "@santerijps/global-state-react",
+  "version": "1.0.0",
+  "description": "Global state management in React",
+  "keywords": ["react", "javascript", "typescript", "js", "ts", "global", "state", "store", "hook"],
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "test": "exit 0"
+  },
+  "author": "Santeri Sydänmetsä",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/react": "^18.2.45",
+    "ts-node": "^10.9.2",
+    "tsup": "^8.0.1",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "react": "^18.2.0"
+  }
+}
