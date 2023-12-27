@@ -1,6 +1,6 @@
 {
   "name": "@santerijps/global-state-react",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Global state management in React",
   "repository": {
     "type": "github",

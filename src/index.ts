@@ -52,7 +52,7 @@ export function createGlobalState<T>(initialState: T) {
   return new GlobalState(initialState);
 }
 
-export function useGlobalState<T>(globalState: GlobalState<T>): [T, StateUpdateFunction<T>] {
+export function useGlobalState<T>(globalState: GlobalState<T>): [Readonly<T>, StateUpdateFunction<T>] {
   const [_, setState] = useState({});
   const state: T = globalState.getState();
   const onNotification = () => setState(() => ({}));
