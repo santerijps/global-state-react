@@ -4,9 +4,19 @@
   "description": "Global state management in React",
   "repository": {
     "type": "github",
-    "url": "https://github.com/santerijps/global-state-react"
+    "url": "git+https://github.com/santerijps/global-state-react.git"
   },
-  "keywords": ["react", "javascript", "typescript", "js", "ts", "global", "state", "store", "hook"],
+  "keywords": [
+    "react",
+    "javascript",
+    "typescript",
+    "js",
+    "ts",
+    "global",
+    "state",
+    "store",
+    "hook"
+  ],
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
