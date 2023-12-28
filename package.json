@@ -1,6 +1,6 @@
 {
   "name": "@santerijps/global-state-react",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Global state management in React",
   "repository": {
     "type": "github",
@@ -17,10 +17,14 @@
     "store",
     "hook"
   ],
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": "./dist/index.js",
-    "./helpers": "./dist/helpers.js"
+    "./helpers": "./dist/helpers.js",
+    "./package.json": "./package.json"
   },
+  "files": ["dist"],
   "scripts": {
     "build": "tsup",
     "test": "exit 0"
