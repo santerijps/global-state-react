@@ -67,7 +67,7 @@ export function useGlobalCount() {
 import { useGlobalCount } from './count.ts';
 
 export default function Counter() {
-  const count = useGlobalCount();;
+  const count = useGlobalCount();
 
   return (
     <main>
