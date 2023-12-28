@@ -77,3 +77,54 @@ export default function Counter() {
   );
 }
 ```
+
+## Helpers
+
+### `<StateRenderer />`
+
+The `StateRenderer` is a React component can be used to quarantine state updates and re-renders to a smaller context.
+In other words, this allows a re-render to only occur where it is needed.
+
+```tsx
+import { useGlobalCount } from './count.ts';
+import { StateRenderer } from '@santerijps/global-state-react/helpers';
+
+function Example1() {
+  const count = useGlobalCount(); // Whenever count mutates, this entire component re-renders
+
+  return (
+    <main>
+      {count.value}
+      {/* Imagine a large and complex structure here */}
+    </main>
+  );
+}
+
+// Wrapping the hook call in StateRenderer ensures that only the StateRenderer re-renders.
+// StateRenderer returns <>{value}</>
+function Example2() {
+  return (
+    <main>
+      <StateRenderer hook={() => useGlobalCount().value} />
+      {/* Imagine a large and complex structure here */}
+    </main>
+  );
+}
+
+// The hook prop takes a function that returns some state.
+// If we want more control over how the state is rendered, we can use the render prop.
+function Example3() {
+  return (
+    <main>
+      <StateRenderer hook={useGlobalCount} render={count => (
+        <>
+          {count.value}
+          <button onClick={count.increment}>Increment</button>
+        </>
+      )}/>
+      {/* Imagine a large and complex structure here */}
+    </main>
+  );
+}
+
+```
